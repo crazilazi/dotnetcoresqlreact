@@ -14,16 +14,15 @@ namespace Ahc.Discovery.Service.Controllers
     [ApiController]
     public class EmployeeController : Controller
     {
-        private readonly IRepository<Employee> _employeeRepository;
+        private readonly IEmployeeRepository _employeeRepository;
         private readonly IMapper _mapper;
-        public EmployeeController(IRepository<Employee> employeeRepository, IMapper mapper)
+        public EmployeeController(IEmployeeRepository employeeRepository, IMapper mapper)
         {
             _employeeRepository = employeeRepository;
             _mapper = mapper;
         }
 
         // GET: api/Employee/GetAllEmployee
-        [ApiAuthFilter]
         [HttpGet("GetAllEmployee")]
        
         public IActionResult Get()
@@ -32,6 +31,12 @@ namespace Ahc.Discovery.Service.Controllers
             return Ok(_mapper.Map< IEnumerable<AppEmployee>>(employees));
         }
 
+        [HttpGet("GetPagedData/{pageNumber}/{pageSize}")]
+        public IActionResult Get(int pageNumber, int pageSize)
+        {
+            IEnumerable<Employee> employees = _employeeRepository.GetPagedData(pageNumber, pageSize);
+            return Ok(_mapper.Map<IEnumerable<AppEmployee>>(employees));
+        }
         // GET: api/Employee/GetOneEmployee/5
         [HttpGet("GetOneEmployee/{id}")]
         public IActionResult Get(Guid id)

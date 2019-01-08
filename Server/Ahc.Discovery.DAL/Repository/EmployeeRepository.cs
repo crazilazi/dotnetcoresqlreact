@@ -1,4 +1,5 @@
 ﻿using Ahc.Discovery.BAL.Models;
+using Ahc.Discovery.BAL.Paging;
 using Ahc.Discovery.BAL.Repository;
 using log4net;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 
 namespace Ahc.Discovery.DAL.Repository
 {
-    public class EmployeeRepository : IRepository<Employee>
+    public class EmployeeRepository : IEmployeeRepository
     {
         readonly EmployeeContext _employeeContext;
         readonly ILog _logger;
@@ -57,6 +58,12 @@ namespace Ahc.Discovery.DAL.Repository
             _logger.Info($"Deleting employee {employee.Id}");
             _employeeContext.Employees.Remove(employee);
             _employeeContext.SaveChanges();
+        }
+
+        public IEnumerable<Employee> GetPagedData(int pageNumber, int pageSize)
+        {
+            _logger.Info("Getting all employee");
+            return _employeeContext.Employees.OrderBy(o => o.Id).ToPagedList(pageNumber, pageSize);
         }
     }
 }

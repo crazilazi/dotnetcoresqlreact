@@ -21,7 +21,7 @@ namespace Ahc.Discovery.DAL
             var employees = new List<Employee>();
             var s = Environment.CurrentDirectory;
       
-            string mockDataPath = @"C:\Working\training\dotnetcoresqlreact\Ahc.Discovery\Ahc.Discovery.DAL\MOCK_DATA.json";
+            string mockDataPath = @"C:\Working\training\dotnetcoresqlreact\server\Ahc.Discovery.DAL\MOCK_DATA.json";
             using (StreamReader r = new StreamReader(mockDataPath))
             {
                 string json = r.ReadToEnd();

@@ -31,7 +31,7 @@ class EmployeeTable extends React.Component {
       // tslint:disable-next-line:no-console
       .then(response => {
         const pageCount = Math.ceil(response.data.rowCount / this.pageSize);
-        this.setState({ empData: response.data.data, currentPage: 0, pagesCount: pageCount });
+        this.setState({ empData: response.data, currentPage: 0, pagesCount: pageCount });
         // this.pagesCount = Math.ceil(this.state.empData.length / this.pageSize);
         // tslint:disable-next-line:no-console
         console.log(this.pageSize);
