@@ -1,138 +1,337 @@
-2019-01-08 15:34:01,644 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
- 2019-01-08 15:34:01,644 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
- 2019-01-08 15:34:01,724 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 73.6849ms 200 
- 2019-01-08 15:34:01,961 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:34:02,713 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
- 2019-01-08 15:34:02,716 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:34:02,998 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:34:03,331 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+2019-01-09 11:05:56,206 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 11:05:56,206 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 11:05:56,350 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 133.049ms 200 
+ 2019-01-09 11:05:56,623 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:05:57,394 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 11:05:57,398 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:05:57,777 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:05:58,166 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
 FROM [Employees] AS [e]
- 2019-01-08 15:34:03,390 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 673.172ms.
- 2019-01-08 15:34:03,401 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:34:03,640 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1665.5267ms
- 2019-01-08 15:34:03,753 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 2012.8461ms 200 application/json; charset=utf-8
- 2019-01-08 15:34:04,164 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/favicon.ico  
- 2019-01-08 15:34:04,173 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 7.9955ms 404 
- 2019-01-08 15:34:22,606 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetPagedData/1/10  
- 2019-01-08 15:34:22,612 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 6.3045ms 404 
- 2019-01-08 15:34:47,092 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetPagedData  
- 2019-01-08 15:34:47,109 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:34:47,157 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (0, 0) - Validation state: Valid
- 2019-01-08 15:35:35,443 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
- 2019-01-08 15:35:35,443 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
- 2019-01-08 15:35:35,516 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 65.8793ms 200 
- 2019-01-08 15:35:35,663 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:35:36,114 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
- 2019-01-08 15:35:36,117 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:35:36,413 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:35:36,616 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:05:58,242 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 839.8916ms.
+ 2019-01-09 11:05:58,256 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:05:58,304 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1671.7508ms
+ 2019-01-09 11:05:58,316 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 2115.2197ms 200 application/json; charset=utf-8
+ 2019-01-09 11:05:58,727 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/favicon.ico  
+ 2019-01-09 11:05:58,735 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 7.1787ms 404 
+ 2019-01-09 11:06:25,540 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetPagedData/1/10  
+ 2019-01-09 11:06:25,565 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:06:25,611 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 11:06:28,062 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:06:28,084 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:06:28,177 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [o]
+ 2019-01-09 11:06:28,234 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (39ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
+FROM [Employees] AS [o]
+ORDER BY [o].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 11:08:28,800 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 11:08:28,800 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 11:08:28,856 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 52.3198ms 200 
+ 2019-01-09 11:08:29,010 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:08:29,439 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 11:08:29,443 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:08:29,722 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:08:29,917 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
 FROM [Employees] AS [e]
- 2019-01-08 15:35:36,683 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 563.4751ms.
- 2019-01-08 15:35:36,695 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:35:36,746 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1077.1931ms
- 2019-01-08 15:35:36,758 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1319.7007ms 200 application/json; charset=utf-8
- 2019-01-08 15:35:46,814 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/2/10  
- 2019-01-08 15:35:46,832 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:35:46,870 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (2, 10) - Validation state: Valid
- 2019-01-08 15:35:57,912 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:35:57,922 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:35:58,004 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:08:29,998 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 553.1971ms.
+ 2019-01-09 11:08:30,015 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:08:30,080 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1064.3409ms
+ 2019-01-09 11:08:30,101 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1297.3834ms 200 application/json; charset=utf-8
+ 2019-01-09 11:08:35,576 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 11:08:35,594 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:08:35,646 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 11:08:37,411 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:08:37,418 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:08:37,496 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:35:58,059 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:08:37,545 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (31ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:35:58,071 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11196.0251ms.
- 2019-01-08 15:35:58,076 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:35:58,082 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 11245.2231ms
- 2019-01-08 15:35:58,126 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 11278.3754ms 200 application/json; charset=utf-8
- 2019-01-08 15:36:21,352 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/2/10  
- 2019-01-08 15:36:21,359 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:36:21,386 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (2, 10) - Validation state: Valid
- 2019-01-08 15:36:21,388 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:36:21,393 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:36:21,427 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:08:37,551 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1900.6258ms.
+ 2019-01-09 11:08:37,556 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Paging.PagedList`1[[Ahc.Discovery.BAL.Models.Employee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:08:37,571 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1971.4455ms
+ 2019-01-09 11:08:37,582 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 2000.4268ms 200 application/json; charset=utf-8
+ 2019-01-09 11:09:23,189 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 11:09:23,195 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:09:23,227 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 11:09:26,704 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:09:26,709 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:09:26,737 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:36:21,458 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:09:26,764 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:36:21,466 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 75.1502ms.
- 2019-01-08 15:36:21,471 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:36:21,476 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 111.7754ms
- 2019-01-08 15:36:21,497 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 127.9746ms 200 application/json; charset=utf-8
- 2019-01-08 15:36:45,015 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/2/10  
- 2019-01-08 15:36:45,020 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:36:45,044 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (2, 10) - Validation state: Valid
- 2019-01-08 15:36:45,046 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:36:45,051 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:36:45,088 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:13:04,858 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 11:13:04,858 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 11:13:04,948 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 53.2419ms 200 
+ 2019-01-09 11:13:05,169 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:13:05,676 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 11:13:05,679 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:13:05,951 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:13:06,139 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
+FROM [Employees] AS [e]
+ 2019-01-09 11:13:06,220 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 538.8306ms.
+ 2019-01-09 11:13:06,234 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:13:06,284 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1107.8068ms
+ 2019-01-09 11:13:06,304 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1441.1554ms 200 application/json; charset=utf-8
+ 2019-01-09 11:13:14,065 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 11:13:14,102 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:13:14,162 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 11:13:14,167 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:13:14,178 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:13:14,286 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:36:45,113 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:13:14,351 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (38ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:36:45,117 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 69.1623ms.
- 2019-01-08 15:36:45,121 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:36:45,126 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 99.3988ms
- 2019-01-08 15:36:45,130 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 115.7024ms 200 application/json; charset=utf-8
- 2019-01-08 15:36:52,621 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
- 2019-01-08 15:36:52,628 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:36:52,658 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
- 2019-01-08 15:36:52,661 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:36:52,674 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:36:52,706 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:13:14,359 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 191.8455ms.
+ 2019-01-09 11:13:14,365 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Paging.PagedList`1[[Ahc.Discovery.BAL.Models.Employee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:13:14,391 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 278.882ms
+ 2019-01-09 11:13:14,446 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 374.1723ms 200 application/json; charset=utf-8
+ 2019-01-09 11:13:34,488 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 11:13:34,493 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 11:13:34,522 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 11:13:36,253 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 11:13:36,259 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 11:13:36,288 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:36:52,733 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:13:36,320 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:36:52,738 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 75.2774ms.
- 2019-01-08 15:36:52,743 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:36:52,748 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 114.9555ms
- 2019-01-08 15:36:52,764 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 135.3888ms 200 application/json; charset=utf-8
- 2019-01-08 15:37:11,107 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
- 2019-01-08 15:37:11,113 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:37:11,137 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
- 2019-01-08 15:37:11,139 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:37:11,143 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:37:11,168 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 11:14:25,750 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 51220.8229ms.
+ 2019-01-09 11:14:25,759 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Paging.PagedList`1[[Ahc.Discovery.BAL.Models.Employee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 11:14:25,781 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 51264.985ms
+ 2019-01-09 11:14:25,819 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 51318.7665ms 200 application/json; charset=utf-8
+ 2019-01-09 12:21:10,596 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 12:21:10,596 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 12:21:10,653 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 51.4519ms 200 
+ 2019-01-09 12:21:10,827 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 12:21:11,236 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 12:21:11,239 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 12:21:11,617 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 12:21:11,799 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
+FROM [Employees] AS [e]
+ 2019-01-09 12:21:11,861 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 619.7421ms.
+ 2019-01-09 12:21:11,875 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 12:21:11,929 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1093.7722ms
+ 2019-01-09 12:21:11,939 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1348.2288ms 200 application/json; charset=utf-8
+ 2019-01-09 12:22:01,530 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 12:22:01,548 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 12:22:01,600 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 12:22:01,604 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 12:22:01,627 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 12:22:01,693 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:37:11,194 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 12:22:01,735 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:37:11,200 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 59.2587ms.
- 2019-01-08 15:37:11,204 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:37:11,208 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 91.4153ms
- 2019-01-08 15:37:11,220 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 105.5458ms 200 application/json; charset=utf-8
- 2019-01-08 15:37:54,394 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
- 2019-01-08 15:37:54,400 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
- 2019-01-08 15:37:54,437 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
- 2019-01-08 15:37:54,441 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
- 2019-01-08 15:37:54,446 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
- 2019-01-08 15:37:54,480 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 12:22:01,742 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 136.6624ms.
+ 2019-01-09 12:22:01,746 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Dto.PagedEmployee'.
+ 2019-01-09 12:22:01,764 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 209.5847ms
+ 2019-01-09 12:22:01,777 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 240.5348ms 200 application/json; charset=utf-8
+ 2019-01-09 12:22:36,360 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/2/10  
+ 2019-01-09 12:22:36,369 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 12:22:36,400 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (2, 10) - Validation state: Valid
+ 2019-01-09 12:22:36,402 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 12:22:36,407 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 12:22:36,437 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT COUNT(*)
 FROM [Employees] AS [o]
- 2019-01-08 15:37:54,505 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+ 2019-01-09 12:22:36,467 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (25ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
 SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
 FROM [Employees] AS [o]
 ORDER BY [o].[Id]
 OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
- 2019-01-08 15:37:54,511 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 68.1628ms.
- 2019-01-08 15:37:54,514 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
- 2019-01-08 15:37:54,518 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 113.1854ms
- 2019-01-08 15:37:54,548 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 131.2928ms 200 application/json; charset=utf-8
+ 2019-01-09 12:22:36,471 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 67.1141ms.
+ 2019-01-09 12:22:36,476 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Dto.PagedEmployee'.
+ 2019-01-09 12:22:36,480 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 100.4381ms
+ 2019-01-09 12:22:36,495 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 126.147ms 200 application/json; charset=utf-8
+ 2019-01-09 14:10:09,176 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 14:10:09,176 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 14:10:09,248 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 68.4781ms 200 
+ 2019-01-09 14:10:09,403 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:10:09,823 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 14:10:09,826 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 14:10:10,227 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:10:10,413 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
+FROM [Employees] AS [e]
+ 2019-01-09 14:10:10,480 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 651.3536ms.
+ 2019-01-09 14:10:10,495 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 14:10:10,548 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1137.3826ms
+ 2019-01-09 14:10:10,560 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1392.0202ms 200 application/json; charset=utf-8
+ 2019-01-09 14:10:26,705 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 14:10:26,721 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:10:26,762 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 14:10:26,766 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 14:10:26,788 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:10:26,869 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [p]
+ 2019-01-09 14:10:26,906 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (22ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[FullName], [p].[Email]
+FROM [Employees] AS [p]
+ORDER BY [p].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 14:10:26,913 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 146.8729ms.
+ 2019-01-09 14:10:26,917 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Dto.PagedEmployee'.
+ 2019-01-09 14:10:26,927 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 201.9609ms
+ 2019-01-09 14:10:26,942 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 227.2904ms 200 application/json; charset=utf-8
+ 2019-01-09 14:10:49,384 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 14:10:49,396 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:10:49,423 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 14:10:49,426 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 14:10:53,888 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:10:54,043 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [p]
+ 2019-01-09 14:10:54,079 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[FullName], [p].[Email]
+FROM [Employees] AS [p]
+ORDER BY [p].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 14:12:15,068 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 14:12:15,068 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 14:12:15,120 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 50.913ms 200 
+ 2019-01-09 14:12:15,281 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:12:15,678 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 14:12:15,681 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 14:12:16,020 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:12:16,206 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
+FROM [Employees] AS [e]
+ 2019-01-09 14:12:16,279 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 595.7381ms.
+ 2019-01-09 14:12:16,293 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 14:12:16,345 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1058.5451ms
+ 2019-01-09 14:12:16,372 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1293.2473ms 200 application/json; charset=utf-8
+ 2019-01-09 14:12:20,963 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 14:12:20,977 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:12:21,019 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 14:12:21,024 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 14:12:23,308 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:12:23,510 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [p]
+ 2019-01-09 14:12:23,546 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[FullName], [p].[Email]
+FROM [Employees] AS [p]
+ORDER BY [p].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 14:12:29,104 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8079.8701ms.
+ 2019-01-09 14:12:29,112 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Dto.PagedEmployee'.
+ 2019-01-09 14:12:29,141 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 8157.555ms
+ 2019-01-09 14:12:29,375 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? - MESSAGE: An unhandled exception has occurred while executing the request.
+ System.InvalidCastException: Unable to cast object of type '<>f__AnonymousType2`3[System.Guid,System.String,System.String]' to type 'Ahc.Discovery.BAL.Dto.AppEmployee'.
+   at System.Linq.Enumerable.CastIterator[TResult](IEnumerable source)+MoveNext()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 677
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 459
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 80
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 1151
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteObject(TextWriter writer, Object value)
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-01-09 14:12:29,389 Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.? - MESSAGE: The response has already started, the error page middleware will not be executed.
+ 2019-01-09 14:12:29,405 Microsoft.AspNetCore.Server.Kestrel.? - MESSAGE: Connection id "0HLJM1PDH32K8", Request id "0HLJM1PDH32K8:00000002": An unhandled exception was thrown by the application.
+ System.InvalidCastException: Unable to cast object of type '<>f__AnonymousType2`3[System.Guid,System.String,System.String]' to type 'Ahc.Discovery.BAL.Dto.AppEmployee'.
+   at System.Linq.Enumerable.CastIterator[TResult](IEnumerable source)+MoveNext()
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 677
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 459
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType) in /_/Src/Newtonsoft.Json/Serialization/JsonSerializerInternalWriter.cs:line 80
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType) in /_/Src/Newtonsoft.Json/JsonSerializer.cs:line 1151
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteObject(TextWriter writer, Object value)
+   at Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IISIntegration.IISMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2019-01-09 14:12:29,417 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 8452.677ms 200 application/json; charset=utf-8
+ 2019-01-09 14:12:38,834 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 14:12:38,839 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:12:38,864 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 14:12:38,866 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 14:12:43,804 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:12:43,972 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [p]
+ 2019-01-09 14:12:44,012 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (33ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[FullName], [p].[Email]
+FROM [Employees] AS [p]
+ORDER BY [p].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 14:18:30,133 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/GetAllEmployee  
+ 2019-01-09 14:18:30,133 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:4190/  0
+ 2019-01-09 14:18:30,188 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 51.2455ms 200 
+ 2019-01-09 14:18:30,352 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:18:30,844 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) - Validation state: Valid
+ 2019-01-09 14:18:30,847 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all employee
+ 2019-01-09 14:18:31,122 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:18:31,301 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [e].[Id], [e].[Address], [e].[DateCreated], [e].[DateModified], [e].[DateOfBirth], [e].[Email], [e].[FirstName], [e].[FullName], [e].[Gender], [e].[LastName], [e].[PhoneNumber]
+FROM [Employees] AS [e]
+ 2019-01-09 14:18:31,382 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 532.8099ms.
+ 2019-01-09 14:18:31,394 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ahc.Discovery.BAL.Dto.AppEmployee, Ahc.Discovery.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+ 2019-01-09 14:18:31,449 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 1090.915ms
+ 2019-01-09 14:18:31,470 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 1331.4094ms 200 application/json; charset=utf-8
+ 2019-01-09 14:18:35,546 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request starting HTTP/1.1 GET http://localhost:4190/api/employee/getpageddata/1/10  
+ 2019-01-09 14:18:35,563 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Route matched with {action = "Get", controller = "Employee"}. Executing action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service)
+ 2019-01-09 14:18:35,609 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executing action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) with arguments (1, 10) - Validation state: Valid
+ 2019-01-09 14:18:35,612 Ahc.Discovery.DAL.Repository.EmployeeRepository.? - MESSAGE: Getting all paged data
+ 2019-01-09 14:18:35,620 Microsoft.EntityFrameworkCore.Infrastructure.? - MESSAGE: Entity Framework Core 2.1.4-rtm-31024 initialized 'EmployeeContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+ 2019-01-09 14:18:35,699 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [o]
+ 2019-01-09 14:18:35,741 Microsoft.EntityFrameworkCore.Database.Command.? - MESSAGE: Executed DbCommand (23ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o].[Id], [o].[Address], [o].[DateCreated], [o].[DateModified], [o].[DateOfBirth], [o].[Email], [o].[FirstName], [o].[FullName], [o].[Gender], [o].[LastName], [o].[PhoneNumber]
+FROM [Employees] AS [o]
+ORDER BY [o].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+ 2019-01-09 14:18:35,747 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action method Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 133.9627ms.
+ 2019-01-09 14:18:35,751 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.? - MESSAGE: Executing ObjectResult, writing value of type 'Ahc.Discovery.BAL.Dto.PagedEmployee'.
+ 2019-01-09 14:18:35,768 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? - MESSAGE: Executed action Ahc.Discovery.Service.Controllers.EmployeeController.Get (Ahc.Discovery.Service) in 200.9177ms
+ 2019-01-09 14:18:35,783 Microsoft.AspNetCore.Hosting.Internal.WebHost.? - MESSAGE: Request finished in 228.5915ms 200 application/json; charset=utf-8
  

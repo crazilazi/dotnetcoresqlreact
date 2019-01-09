@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Ahc.Discovery.BAL.Paging
 {
-    public interface IPagedList
+    public interface IPaging
     {
-        int TotalCount { get; }
-        int PageCount { get; }
-        int Page { get; }
+        int TotalNoRows { get; }
+        int NoOfPages { get; }
+        int PageNo { get; }
         int PageSize { get; }
     }
 }

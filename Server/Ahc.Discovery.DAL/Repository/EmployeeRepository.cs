@@ -1,4 +1,5 @@
-﻿using Ahc.Discovery.BAL.Models;
+﻿using Ahc.Discovery.BAL.Dto;
+using Ahc.Discovery.BAL.Models;
 using Ahc.Discovery.BAL.Paging;
 using Ahc.Discovery.BAL.Repository;
 using log4net;
@@ -60,10 +61,17 @@ namespace Ahc.Discovery.DAL.Repository
             _employeeContext.SaveChanges();
         }
 
-        public IEnumerable<Employee> GetPagedData(int pageNumber, int pageSize)
+        public PagedEmployee GetPagedData(int pageNumber, int pageSize)
         {
-            _logger.Info("Getting all employee");
-            return _employeeContext.Employees.OrderBy(o => o.Id).ToPagedList(pageNumber, pageSize);
+            _logger.Info("Getting all paged data");
+            var pagedData = new PagedEmployee();
+            var employees =_employeeContext.Employees.OrderBy(o => o.Id).ToPagingData(pageNumber, pageSize);
+            pagedData.AppEmployee = employees;
+            pagedData.PageNo = employees.PageNo;
+            pagedData.NoOfPages = employees.NoOfPages;
+            pagedData.PageSize = employees.PageSize;
+            pagedData.TotalNoRows = employees.TotalNoRows;
+            return pagedData;
         }
     }
 }

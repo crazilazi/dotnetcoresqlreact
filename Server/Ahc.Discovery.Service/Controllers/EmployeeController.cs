@@ -7,6 +7,7 @@ using AutoMapper;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 using Ahc.Discovery.Service.Filters;
+using Ahc.Discovery.BAL.Paging;
 
 namespace Ahc.Discovery.Service.Controllers
 {
@@ -34,8 +35,7 @@ namespace Ahc.Discovery.Service.Controllers
         [HttpGet("GetPagedData/{pageNumber}/{pageSize}")]
         public IActionResult Get(int pageNumber, int pageSize)
         {
-            IEnumerable<Employee> employees = _employeeRepository.GetPagedData(pageNumber, pageSize);
-            return Ok(_mapper.Map<IEnumerable<AppEmployee>>(employees));
+            return Ok(_employeeRepository.GetPagedData(pageNumber, pageSize));
         }
         // GET: api/Employee/GetOneEmployee/5
         [HttpGet("GetOneEmployee/{id}")]

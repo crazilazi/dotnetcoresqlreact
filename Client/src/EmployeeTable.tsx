@@ -4,14 +4,11 @@ import { Pagination, PaginationItem, PaginationLink, Table } from "reactstrap";
 import { IState } from "./allInterface";
 import "./EmployeeTable.css";
 
-// import logo from "./logo.svg";
-
 class EmployeeTable extends React.Component {
   public pageSize: number = 0;
-  // public pagesCount: number = 0;
   // tslint:disable-next-line:member-access
   state: IState = {
-    currentPage: 1,
+    currentPage: 0,
     empData: [],
     pagesCount: 0
   };
@@ -19,28 +16,13 @@ class EmployeeTable extends React.Component {
   constructor(props: any, context: any) {
     super(props, context);
     this.pageSize = 10;
-    // tslint:disable-next-line:no-console
-    console.log("Charan");
   }
 
   public componentDidMount() {
-    // you logic here
-    // tslint:disable-next-line:no-console
     axios
-      .get(`${this.url}/${this.state.currentPage}/${this.pageSize}`)
-      // tslint:disable-next-line:no-console
+      .get(`${this.url}/${this.state.currentPage + 1}/${this.pageSize}`)
       .then(response => {
-        const pageCount = Math.ceil(response.data.rowCount / this.pageSize);
-        this.setState({ empData: response.data, currentPage: 0, pagesCount: pageCount });
-        // this.pagesCount = Math.ceil(this.state.empData.length / this.pageSize);
-        // tslint:disable-next-line:no-console
-        console.log(this.pageSize);
-        // tslint:disable-next-line:no-console
-        console.log(this.state.pagesCount);
-        // tslint:disable-next-line:no-console
-        console.log(this.state.currentPage);
-        // tslint:disable-next-line:no-console
-        console.log("Kali");
+        this.setState({ empData: response.data.appEmployee, pagesCount: response.data.noOfPages });
       });
   }
 
@@ -48,13 +30,9 @@ class EmployeeTable extends React.Component {
     e.preventDefault();
     axios
       .get(`${this.url}/${index + 1}/${this.pageSize}`)
-      // tslint:disable-next-line:no-console
       .then(response => {
-        this.setState({ empData: response.data.data, currentPage: index });
+        this.setState({ empData: response.data.appEmployee, currentPage: index });
       });
-    this.setState({
-      currentPage: index
-    });
   }
 
   public numberToArray(num: number) {

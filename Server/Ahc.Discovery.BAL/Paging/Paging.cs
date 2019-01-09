@@ -5,21 +5,21 @@ using System.Text;
 
 namespace Ahc.Discovery.BAL.Paging
 {
-    public class PagedList<T> : List<T>, IPagedList
+    public class Paging<T> : List<T>, IPaging
     {
-        public int TotalCount { get; private set; }
-        public int PageCount { get; private set; }
-        public int Page { get; private set; }
+        public int TotalNoRows { get; private set; }
+        public int NoOfPages { get; private set; }
+        public int PageNo { get; private set; }
         public int PageSize { get; private set; }
 
-        public PagedList(IQueryable<T> source, int page, int pageSize)
+        public Paging(IQueryable<T> source, int page, int pageSize)
         {
-            TotalCount = source.Count();
-            PageCount = GetPageCount(pageSize, TotalCount);
-            Page = page < 1 ? 0 : page - 1;
+            TotalNoRows = source.Count();
+            NoOfPages = GetPageCount(pageSize, TotalNoRows);
+            PageNo = page < 1 ? 0 : page - 1;
             PageSize = pageSize;
 
-            AddRange(source.Skip(Page * PageSize).Take(PageSize).ToList());
+            AddRange(source.Skip(PageNo * PageSize).Take(PageSize).ToList());
         }
 
         private int GetPageCount(int pageSize, int totalCount)
