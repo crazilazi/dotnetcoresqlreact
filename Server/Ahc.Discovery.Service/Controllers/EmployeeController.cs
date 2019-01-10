@@ -48,7 +48,7 @@ namespace Ahc.Discovery.Service.Controllers
                 return NotFound("The Employee record couldn't be found.");
             }
 
-            return Ok(_mapper.Map<AppEmployee>(employee));
+            return Ok(employee);
         }
 
         // POST: api/Employee/CreateEmployee

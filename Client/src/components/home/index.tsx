@@ -1,8 +1,9 @@
 import axios from "axios";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { Pagination, PaginationItem, PaginationLink, Table } from "reactstrap";
-import { IState } from "./allInterface";
-import "./EmployeeTable.css";
+import { IState } from 'src/common/allInterface';
+import "./index.css";
 
 class EmployeeTable extends React.Component {
   public pageSize: number = 0;
@@ -49,18 +50,18 @@ class EmployeeTable extends React.Component {
         <Table>
           <thead>
             <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Phone Number</th>
+              <th>Full Name</th>
+              {/* <th>Last Name</th>
+              <th>Phone Number</th> */}
               <th>Email</th>
             </tr>
           </thead>
           <tbody>
             {this.state.empData.map(emp => (
-              <tr key={emp.employeeId}>
-                <td>{emp.firstName}</td>
-                <td>{emp.lastName}</td>
-                <td>{emp.phoneNumber}</td>
+              <tr key={emp.id}>
+                <td><Link to={`/get/${emp.id}`}>{emp.fullName}</Link> </td>
+                {/* <td>{emp.lastName}</td>
+                <td>{emp.phoneNumber}</td> */}
                 <td>{emp.email}</td>
               </tr>
             ))}
